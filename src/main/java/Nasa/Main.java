@@ -26,7 +26,7 @@ public class Main {
                         .build())
                 .build();
              CloseableHttpResponse response = httpClient.execute(request)) {
-            mapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
+          mapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
             List<NasaMedia> nasaMediaList = mapper.readValue(response.getEntity().getContent(), new TypeReference<>() {
             });
             ;

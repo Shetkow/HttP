@@ -7,7 +7,7 @@ public class NasaMedia {
     private final String date;
     private final String explanation;
     private final String hdurl;
-    private final String media_type;
+    private final String mediaType;
     private final String title;
     private final String url;
     private final String service_version;
@@ -15,14 +15,14 @@ public class NasaMedia {
     public NasaMedia(@JsonProperty("date") String date,
                      @JsonProperty("explanation") String explanation,
                      @JsonProperty("hdurl") String hdurl,
-                     @JsonProperty("media_type") String media_type,
+                     @JsonProperty("media_type") String mediaType,
                      @JsonProperty("title") String title,
                      @JsonProperty("url") String url,
     @JsonProperty("service_version") String service_version){
         this.date = date;
         this.explanation = explanation;
         this.hdurl = hdurl;
-        this.media_type = media_type;
+        this.mediaType = mediaType;
         this.title = title;
         this.url = url;
         this.service_version = service_version;
@@ -37,7 +37,7 @@ public class NasaMedia {
     }
 
     public String getMedia_type() {
-        return media_type;
+        return mediaType;
     }
 
     public String getTitle() {
@@ -57,6 +57,6 @@ public class NasaMedia {
     }
     @Override
     public String toString(){
-        return "Это " + media_type + "\n Краткое описание: " + title + "было запечетлено " + date;
+        return "Это " + mediaType + "\n Краткое описание: " + title + "было запечетлено " + date;
     }
 }
